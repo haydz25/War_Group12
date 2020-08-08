@@ -1,4 +1,6 @@
 /*
+ * Program By Group 12
+ *
  * Suit.java
  * Author: Haydyn Barreto
  * Date: 08/08/2020

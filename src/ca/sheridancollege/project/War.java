@@ -1,4 +1,6 @@
 /*
+ * Program By Group 12
+ *
  * War.java
  * Author: Haydyn Barrero
  * Date: 08/08/2020
