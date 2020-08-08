@@ -1,25 +1,60 @@
-/**
- * SYST 17796 Project Base code.
- * Students can modify and extend to implement their game.
- * Add your name as an author and the date!
+/*
+ * Card.java
+ * Author: Haydyn Barrero
+ * Date: 08/08/2020
+ *
+ * Description:
+ * The card class gets the suit and rank of a card
+ * and returns a formatted string of the card's
+ * rank and suit
  */
 package ca.sheridancollege.project;
 
-/**
- * A class to be used as the base Card class for the project. Must be general enough to be instantiated for any Card
- * game. Students wishing to add to the code should remember to add themselves as a modifier.
- *
- * @author dancye
- */
-public abstract class Card {
-    //default modifier for child classes
+public class Card
+{
+   private final Suit suit;
+   private final Rank rank;
 
-    /**
-     * Students should implement this method for their specific children classes
-     *
-     * @return a String representation of a card. Could be an UNO card, a regular playing card etc.
-     */
-    @Override
-    public abstract String toString();
+   /**
+    * Constructor for initiating a card
+    *
+    * @param rank - The Rank available in the enumerator class
+    * @param suit - The Suit available in the enumerator class
+    */
+   public Card (Rank rank, Suit suit)
+   {
+      this.rank = rank;
+      this.suit = suit;
+   }
 
+   /**
+    * Accessor for getting the Suit of the card
+    *
+    * @return - The Suit of the Card.
+    */
+   public String getSuit ()
+   {
+      return suit.getSuit();
+   }
+
+   /**
+    * Accessor for getting the Rank of the card
+    *
+    * @return - The Rank of the Card.
+    */
+   public int getRank ()
+   {
+      return rank.getRank();
+   }
+
+   /**
+    * Method to display the suit and rank of a card
+    *
+    * @return - The formatted string output of Card's rank and suit.
+    */
+   public String displayCard ()
+   {
+      String card = rank.getRank() + " of " + suit.getSuit();
+      return card;
+   }
 }
